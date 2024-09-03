@@ -52,12 +52,15 @@ body {
 }
 
 .home {
-    background: url('church.jpg') no-repeat center center/cover;
-    height: 400px;
+    background: url('images/macatuba_banner.png') no-repeat center bottom;
+    background-size: cover;
+    height: 600px;
     color: #fff;
     text-align: center;
     padding-top: 150px;
-    margin-top: 80px; /* Ajuste para evitar sobreposição do conteúdo pelo menu fixo */
+    margin-top: 100px; 
+    position: relative;
+    overflow: hidden;
 }
 
 .home h2 {
@@ -73,7 +76,7 @@ body {
     padding: 20px 0;
     background: #fff;
     text-align: center;
-    margin-top: 80px; /* Ajuste para evitar sobreposição do conteúdo pelo menu fixo */
+    margin-top: 20px; /* Ajuste para evitar sobreposição do conteúdo pelo menu fixo */
 }
 
 .agenda h2 {
@@ -101,4 +104,19 @@ body {
     padding: 20px 0;
     text-align: center;
     margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.logo-pascom {
+    max-width: 250px; /* Ajuste o tamanho conforme necessário */
+    margin-top: 10px;
 }
