@@ -51,6 +51,29 @@ body {
     font-size: 18px;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
 .home {
     background: url('images/macatuba_banner.png') no-repeat center bottom;
     background-size: cover;
@@ -104,19 +127,22 @@ body {
     padding: 20px 0;
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .column {
-    flex: 1;
+    flex: 2;
     padding: 0 20px;
 }
 
 .logo-pascom {
-    max-width: 250px; /* Ajuste o tamanho conforme necessário */
+    max-width: 75%; /* Ajuste o tamanho conforme necessário */
     margin-top: 10px;
 }
