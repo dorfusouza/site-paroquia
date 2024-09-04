@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop - 100) {
+            if (pageYOffset >= sectionTop - 120) {
                 current = section.getAttribute('id');
             }
         });
