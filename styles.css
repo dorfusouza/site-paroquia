@@ -18,12 +18,18 @@ body {
     width: 90%;
     margin: auto;
     overflow: hidden;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     background-color: #4CAF50;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,8 +40,28 @@ body {
 
 .logo {
     text-align: center;
-    font-size: 24px;
-    margin: 0;
+}
+
+.logo-img {
+    text-align: right;
+}
+
+.logo-img img {
+    max-width: 120px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo-img {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
 }
 
 .nav ul {
@@ -84,7 +110,7 @@ body {
     height: 600px;
     color: #fff;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 200px;
     margin-top: 100px; 
     position: relative;
     overflow: hidden;
@@ -114,15 +140,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.event {
-    background-color: #eee;
-    padding: 10px;
-    margin: 10px;
-    width: 30%;
-    border-radius: 5px;
-    text-align: left;
 }
 
 .footer {
