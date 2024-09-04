@@ -16,12 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop - 120) {
+            if (pageYOffset >= sectionTop - 150) {
                 current = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
+
             link.classList.remove('active');
             if (link.getAttribute('href').includes(current)) {
                 link.classList.add('active');
