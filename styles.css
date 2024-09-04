@@ -139,6 +139,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center; /* Centraliza o conteúdo na coluna */
 }
 
 .column {
@@ -147,6 +148,70 @@ body {
 }
 
 .logo-pascom {
-    max-width: 75%; /* Ajuste o tamanho conforme necessário */
+    width: 400px;
+    max-width: 80%; /* Ajuste o tamanho conforme necessário */
     margin-top: 10px;
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    row-gap: 130px; /* Espaçamento entre os ícones */
+}
+
+.social-icons a img {
+    width: 50px; /* Tamanho dos ícones */
+    height: 50px;
+    transition: transform 0.3s ease;  /*Animação ao passar o mouse */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+.transmissao {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.transmissao h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.player-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Largura máxima para o player */
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #000;
+    margin: 0 auto; /* Centraliza o player horizontalmente */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-height: 600px) {
+    .player-container {
+        height: 600px; /* Altura fixa de 600px */
+        padding-bottom: 0; /* Remove o padding-bottom quando a altura máxima é atingida */
+    }
+
+    .player-container iframe {
+        height: 100%; /* Preenche a altura total do contêiner */
+    }
+}
+
+
+
