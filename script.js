@@ -1,3 +1,6 @@
+var url = "https://www.youtube.com/embed/WGI58Uz5zCI?si=mSzBy8N4OCHca_LY";
+document.getElementById('meuvideo').src = url;
+
 document.addEventListener('scroll', function() {
     const scrollPosition = window.pageYOffset;
     const homeSection = document.querySelector('.home');
@@ -33,3 +36,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink(); // Chama a função para definir o link ativo ao carregar a página
 });
+
